@@ -481,3 +481,14 @@ class TourView(LatestFxView):
 
         # return a list to conform with original intention
         return [template]
+
+
+class HelloStartView(LatestFxView):
+
+    template_name = 'firefox/hello/start.html'
+
+    def get_context_data(self, **kwargs):
+        ctx = super(HelloStartView, self).get_context_data(**kwargs)
+        incoming = self.request.GET.get('incomingConversation') or 'none'
+        ctx['incoming_conversation'] = incoming
+        return ctx
