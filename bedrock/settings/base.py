@@ -413,6 +413,12 @@ MINIFY_BUNDLES = {
         'firefox_sync_anim': (
             'css/firefox/sync-animation.less',
         ),
+        'firefox_hello': (
+            'css/sandstone/sandstone-resp.less',
+            'css/firefox/menu-resp.less',
+            'css/libs/socialshare/socialshare.less',
+            'css/firefox/hello.less',
+        ),
         'firefox_independent': (
             'css/sandstone/sandstone-resp.less',
             'css/firefox/independent-splash.less',
@@ -794,6 +800,11 @@ MINIFY_BUNDLES = {
         'firefox_sync_old': (
             'js/firefox/sync-animation.js',
             'js/firefox/sync-old.js',
+        ),
+        'firefox_hello': (
+            'js/firefox/australis/australis-uitour.js',
+            'js/libs/socialshare.min.js',
+            'js/firefox/hello.js',
         ),
         'firefox_privacy_tour': (
             'js/base/mozilla-modal.js',

@@ -1,0 +1,147 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% extends "firefox/base-resp.html" %}
+
+{% block page_title_prefix %}{% endblock %}
+{% block page_title %}{{ _('Firefox Hello — Free, easy video conversations') }}{% endblock %}
+{% block page_desc %}{{ _('Learn all about Firefox Hello and see for yourself how easy it is to have a free video conversation with anyone, anywhere, right from your browser') }}{% endblock %}
+{% block body_id %}firefox-hello{% endblock %}
+
+{% block site_css %}
+  {{ css('firefox_hello') }}
+{% endblock %}
+
+{% block js %}
+  {{ js('firefox_hello') }}
+{% endblock %}
+
+{% block site_header %}
+  <header id="masthead">
+    <div class="container">
+      <a href="{{ url('mozorg.home') }}" id="tabzilla" data-infobar="{{ settings.TABZILLA_INFOBAR_OPTIONS }}">Mozilla</a>
+
+      {% block site_header_nav %}
+        {% include 'firefox/includes/top-menu.html' %}
+      {% endblock %}
+
+      {% block site_header_logo %}
+        {{ super() }}
+      {% endblock %}
+    </div>
+  </header>
+{% endblock %}
+
+{% block content %}
+
+<div id="share-wrapper">
+  {% include 'firefox/includes/social-share.html' %}
+</div>
+
+<main role="main">
+  <section id="intro">
+    <div class="container">
+      <h1 class="h1">{{ _('As easy as saying hello') }}</h1>
+
+      <h2 class="h3">
+        {{ _('Meet Firefox Hello, the easiest way to connect for free over video with anyone, anywhere.') }}
+      </h2>
+
+      <button class="try-hello" id="try-hello-intro">{{ _('Try Firefox Hello') }}</button>
+    </div>{# /.container #}
+  </section>
+
+  <section id="features">
+    <div class="container">
+      <ul>
+        <li id="feature-simple">
+          <h3 class="h3">{{ _('All you need is Firefox') }}</h3>
+
+          <p>
+            {{ _('If you have the latest version of Firefox, you already have Hello.') }}
+            {{ _('There’s no account or sign-in required and nothing extra to download.') }}
+            {{ _('Just start a conversation, send your friend a link and ask them to click it.') }}
+            {{ _('Simple.') }}
+          </p>
+        </li>
+        <li id="feature-invite">
+          <h3 class="h3">{{ _('Invite anyone, anywhere') }}</h3>
+
+          <p>
+            {{ _('Hello is super easy to use and your friends and family don’t even need Firefox to join your conversation.') }}
+            {{ _('As long as they have a compatible browser, they’re good to go.') }}
+          </p>
+
+          <a rel="external" href="https://support.mozilla.org/kb/which-browsers-will-work-firefox-hello-video-chat">{{ _('Learn more about compatible browsers') }}</a>
+        </li>
+        <li id="feature-secure">
+          <h3 class="h3">{{ _('Safe, secure, protected') }}</h3>
+
+          <p>
+            {{ _('Because Hello is built right into Firefox, you can rest easy knowing that your conversations and information will remain private and secure.') }}
+            {{ _('That’s part of our mission, and it’s behind everything we do around here.') }}
+          </p>
+        </li>
+        <li id="feature-account">
+          <h3 class="h3">{{ _('Do more with a Firefox Account') }}</h3>
+
+          <p>
+            {{ _('To start a conversation with someone directly, simply create a free Firefox Account or sign in if you have one already &mdash; it’s the same account you use with Sync.') }}
+            {{ _('You can then add contacts to keep them close at hand.') }}
+          </p>
+        </li>
+        <li id="feature-getfx">
+          <h3 class="h3">{{ _('Get Firefox to get started') }}</h3>
+
+          <p>
+            {{ _('Want to start using Hello?') }}
+            {{ _('All you need is Firefox &mdash; the open source browser that helps you stay in control of your online life while you stay connected with friends and family.') }}
+            {{ _('Download Firefox to start your first conversation.') }}
+          </p>
+        </li>
+      </ul>
+    </div>{# /.container #}
+  </section>
+
+  <section id="download-try">
+    <div class="container">
+      <div class="ctacopy-wrapper">
+        <h2 class="dltry-copy h2" id="ctacopy-nonfx">{{ _('Get Firefox and start your first conversation') }}</h2>
+        <h2 class="dltry-copy h2" id="ctacopy-oldfx">{{ _('Update your Firefox to start using Hello') }}</h2>
+        <h2 class="dltry-copy h2" id="ctacopy-hellofx">{{ _('Start your first conversation today') }}</h2>
+      </div>
+
+      <div class="cta-wrapper">
+        {{ download_firefox(simple=True, dom_id='download-fx') }}
+        <button class="try-hello" id="try-hello-footer">{{ _('Try Hello now') }}</button>
+      </div>
+    </div>{# /.container #}
+  </section>
+
+  <section id="video">
+    <div class="container">
+      <div class="ctacopy-wrapper">
+        <h2 class="h2">{{ _('Get to know Hello') }}</h2>
+
+        <p>
+          {{ _('Want to reconnect with friends around the world?') }}
+          {{ _('Celebrate a birthday when you can’t be there in person?') }}
+          {{ _('Learn more about Firefox Hello and see for yourself how easy it is to have a free video conversation with anyone, anywhere, right from your browser.') }}
+        </p>
+
+        <p>
+          {{ _('Questions?') }}
+          <a rel="external" href="https://support.mozilla.org/kb/firefox-hello-video-and-voice-conversations-online">{{ _('Visit Mozilla Support') }}</a>
+        </p>
+      </div>
+      <div class="cta-wrapper">
+        <video src=""></video>
+      </div>
+    </div>{# /.container #}
+  </section>
+</main>
+
+{% endblock %}
+
+{% block email_form %}{% endblock %}

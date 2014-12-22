@@ -1,0 +1,648 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import "../sandstone/lib.less";
+
+.grainy-sky() {
+    background: #cae1f4;
+    background: url(/media/img/sandstone/grain.png) repeat,
+                    -webkit-linear-gradient(top, #cae1f4, #d9e1e7)
+                    #cae1f4;
+    background: url(/media/img/sandstone/grain.png) repeat,
+                    linear-gradient(to bottom, #cae1f4, #d9e1e7),
+                    #cae1f4;
+}
+
+// Base template overrides
+
+.sky #outer-wrapper {
+    background: #fff;
+}
+
+#wrapper {
+    width: 100%;
+}
+
+#masthead {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -470px;
+    z-index: 10;
+    padding-left: 0;
+    padding-right: 0;
+
+    .container {
+        overflow: visible;
+        padding: 0;
+
+        a:not(.dl-button):after {
+            content: none;
+        }
+    }
+
+    h2 {
+        padding-top: 48px;
+    }
+}
+
+// Common styles
+
+main {
+    .font-size(16px);
+    color: @textColorSecondary;
+}
+
+.container {
+    .clearfix();
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    a[rel="external"] {
+        .trailing-arrow();
+    }
+}
+
+.h1 {
+    .font-size(50px);
+}
+
+.h2 {
+    .font-size(36px);
+}
+
+.h3 {
+    .font-size(28px);
+}
+
+.h1,
+.h2,
+.h3 {
+    .open-sans-light();
+    font-weight: normal;
+    text-shadow: none;
+    line-height: 1.2;
+}
+
+.try-hello {
+    display: none;
+    text-align: center;
+    .border-radius(6px);
+    text-transform: uppercase;
+    .font-size(14px);
+    font-weight: bold;
+    padding: 16px 4px;
+    cursor: pointer;
+    .transition(all 0.3s ease);
+}
+
+// Share
+
+#share-wrapper {
+    position: absolute;
+    z-index: 10;
+    overflow: visible;
+    top: 70px;
+    left: 50%;
+    margin-left: 270px;
+    width: 200px;
+    text-align: right;
+
+    .socialshare {
+        & > div > a {
+            background-image: url(/media/img/firefox/hello/sprite-share.png);
+            color: #2983c8;
+
+            span {
+                border-color: #2983c8;
+            }
+
+            &:hover,
+            &:focus {
+                background-position: 0 8px;
+                color: #2983c8;
+
+                span {
+                    border-color: #2983c8;
+                }
+            }
+
+            &:after {
+                background-image: url(/media/img/firefox/hello/sprite-share.png);
+                background-position: 4px -19px;
+            }
+        }
+
+        &.open > div > a{
+            background-position: 0 8px;
+
+            &:after {
+                background-position: 5px -17px;
+            }
+        }
+
+        #share-options {
+            left: auto;
+            right: 0;
+            width: 85px;
+
+            ul {
+                text-align: left;
+            }
+        }
+    }
+}
+
+html[dir="rtl"] {
+    #share-wrapper {
+        margin-left: -460px;
+        text-align: left;
+
+        .socialshare #share-options {
+            right: auto;
+            left: 0;
+            margin-left: 0;
+            width: auto;
+        }
+    }
+}
+
+// Intro
+
+#intro {
+    .grainy-sky();
+    padding-bottom: @baseLine * 2;
+
+    .container {
+        padding-top: 156px; // compensate for pushing up under tabzilla
+    }
+
+    .h1,
+    .h3 {
+        width: 620px;
+        margin: 0 auto (@baseLine / 2);
+        text-align: center;
+    }
+
+    .try-hello {
+        width: 220px;
+        border: 2px solid #a9bcca;
+        background: transparent;
+        color: #00a0db;
+        margin: 34px auto 0;
+
+        &:hover {
+            background: #fff;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        &.active {
+            display: block;
+        }
+    }
+}
+
+// Features
+
+#features {
+    background: #f5f5f5;
+    padding-top: 72px;
+
+    p {
+        color: #85949f;
+    }
+
+    .h3 {
+        color: #5c5e64;
+    }
+
+    li {
+        float: left;
+        // each icon in sprite is at left edge of 460px wide area
+        background: url(/media/img/firefox/hello/sprite-features.png) left top no-repeat;
+        list-style-type: none;
+        margin: 0 0 (@baseLine * 3) 0;
+        width: 460px - (@baseLine * 4);
+        padding: 144px (@baseLine * 2) 0;
+        text-align: center;
+
+        &:nth-child(odd) {
+            margin-right: @baseLine;
+        }
+    }
+
+    #feature-simple {
+        background-position: 170px top;
+    }
+
+    #feature-invite {
+        background-position: -290px top;
+    }
+
+    #feature-secure {
+        background-position: -750px top;
+    }
+
+    #feature-account,
+    #feature-getfx {
+        background-position: -1210px top
+    }
+
+    #feature-getfx {
+        display: none;
+    }
+}
+
+// Download/Try
+
+#download-try {
+    background: #0092db;
+    padding: 45px 0 50px 0;
+    .clearfix();
+
+    .ctacopy-wrapper {
+        float: left;
+        width: 400px;
+        padding-left: @baseLine * 4;
+        margin-right: @baseLine * 4;
+    }
+
+    .h2 {
+        color: #fff;
+    }
+
+    .cta-wrapper {
+        float: left;
+        width: 380px;
+        padding-top: 15px;
+    }
+
+    .try-hello {
+        width: 280px;
+        border: none;
+        background: @buttonGreen;
+        color: #fff;
+
+        &:hover {
+            background: darken(@buttonGreen, 2%);
+        }
+    }
+}
+
+// default to showing only non-fx copy/cta
+#ctacopy-oldfx,
+#ctacopy-hellofx {
+    display: none;
+}
+
+#try-hello-footer {
+    display: none;
+}
+
+// Video
+
+#video {
+    .grainy-sky();
+    .clearfix();
+    padding: 90px 0;
+
+    .ctacopy-wrapper {
+        float: left;
+        width: 380px;
+        padding-left: @baseLine * 4;
+        margin-right: @baseLine;
+    }
+
+    .cta-wrapper {
+        float: left;
+        width: 380px;
+    }
+
+    // temporary placeholder
+    video {
+        width: 372px;
+        height: 210px;
+        background: #000;
+    }
+}
+
+
+/****************************************************************************/
+// @High resolution images for @retina-type displays
+// Desktop
+@media (-webkit-min-device-pixel-ratio: 1.5),
+       (                min-resolution: 1.5dppx),
+       (                min-resolution: 144dpi) {
+
+    #features li {
+        background-image: url(/media/img/firefox/hello/sprite-features-high-res.png);
+        background-size: 1840px 120px;
+    }
+
+}
+
+/****************************************************************************/
+// @Tablet Layout: 760px
+@media (max-width: @breakDesktop) and (min-width: (@breakTablet + 1)) {
+    #masthead {
+        padding: 0;
+        margin-left: -360px;
+    }
+
+    .container {
+        width: 720px;
+    }
+
+    .h1 {
+        .font-size(46px);
+    }
+
+    .h2 {
+        .font-size(32px);
+    }
+
+    .h3 {
+        .font-size(24px);
+    }
+
+    #share-wrapper {
+        margin-left: 160px;
+    }
+
+    html[dir="rtl"] #share-wrapper {
+        margin-left: -350px;
+    }
+
+    // Features
+
+    #features {
+        li {
+            width: 310px;
+            padding-left: @baseLine;
+            padding-right: @baseLine;
+        }
+
+        #feature-simple {
+            background-position: 115px top;
+        }
+
+        #feature-invite {
+            background-position: -345px top;
+        }
+
+        #feature-secure {
+            background-position: -805px top;
+        }
+
+        #feature-account,
+        #feature-getfx {
+            background-position: -1265px top
+        }
+    }
+
+    // Download/Try
+
+    #download-try {
+        .ctacopy-wrapper {
+            width: 360px;
+            padding-left: @baseLine;
+            margin-right: @baseLine * 2;
+        }
+
+        .cta-wrapper {
+            width: 300px;
+        }
+    }
+
+    // Video
+
+    #video {
+        .ctacopy-wrapper {
+            width: 340px;
+            padding-left: @baseLine;
+            margin-right: @baseLine * 2;
+        }
+
+        .cta-wrapper {
+            width: 320px;
+        }
+
+        // temporary placeholder
+        video {
+            width: 320px;
+        }
+    }
+}
+
+/****************************************************************************/
+// @Wide mobile Layout: 480px
+@media (max-width: @breakTablet) {
+    #masthead {
+        margin-left: -220px;
+
+        h2 {
+            padding-top: 10px;
+        }
+    }
+
+    .container {
+        width: (480px - (@baseLine * 2));
+        padding-left: @baseLine;
+        padding-right: @baseLine;
+    }
+
+    .h1 {
+        .font-size(34px);
+    }
+
+    .h2 {
+        .font-size(26px);
+    }
+
+    .h3 {
+        .font-size(20px);
+    }
+
+    #share-wrapper {
+        margin-left: 20px;
+    }
+
+    html[dir="rtl"] #share-wrapper {
+        margin-left: -210px;
+    }
+
+    // Intro
+
+    #intro {
+        padding-bottom: @baseLine;
+
+        .container {
+            padding-top: 166px;
+        }
+
+        .h1,
+        .h3 {
+            width: auto;
+        }
+
+        .try-hello {
+            margin-bottom: @baseLine;
+        }
+    }
+
+    // Features
+
+    #features {
+        li {
+            float: none;
+            display: block;
+            width: auto;
+            margin: 0 auto (@baseLine * 2) auto;
+            padding-left: 0;
+            padding-right: 0;
+
+            &:nth-child(odd) {
+                margin-right: auto;
+            }
+        }
+
+        #feature-simple {
+            background-position: 160px top;
+        }
+
+        #feature-invite {
+            background-position: -300px top;
+        }
+
+        #feature-secure {
+            background-position: -760px top;
+        }
+
+        #feature-account,
+        #feature-getfx {
+            background-position: -1220px top
+        }
+    }
+
+    // Download/Try
+
+    #download-try {
+        padding: (@baseLine * 2) 0 @baseLine;
+
+        .ctacopy-wrapper,
+        .cta-wrapper {
+            float: none;
+            width: auto;
+        }
+
+        .ctacopy-wrapper {
+            padding-left: 0;
+            margin: 0 0 @baseLine;
+            text-align: center;
+        }
+
+        #download-fx {
+            display: block;
+            margin: 0 auto;
+            width: 240px;
+        }
+
+        .cta-wrapper {
+            padding-top: 0;
+        }
+
+        .try-hello {
+            margin: 0 auto;
+        }
+    }
+
+    // Video
+
+    #video {
+        padding: (@baseLine * 2) 0 @baseLine;
+
+        .ctacopy-wrapper {
+            float: none;
+            width: auto;
+            padding-left: 0;
+            margin-right: 0;
+            text-align: center;
+        }
+
+        .cta-wrapper {
+            width: auto;
+        }
+
+        // temporary placeholder
+        video {
+            width: 440px;
+        }
+    }
+}
+
+/****************************************************************************/
+// @Mobile Layout: 320px
+@media (max-width: @breakMobileLandscape) {
+    #masthead {
+        margin-left: -150px;
+    }
+
+    .container {
+        width: (320px - @baseLine);
+        padding-left: @baseLine / 2;
+        padding-right: @baseLine / 2;
+    }
+
+    main {
+        .font-size(14px);
+    }
+
+    .h1 {
+        .font-size(30px);
+    }
+
+    .h2 {
+        .font-size(24px);
+    }
+
+    .h3 {
+        .font-size(20px);
+    }
+
+    #share-wrapper {
+        display: none;
+    }
+
+    // Features
+
+    #features {
+        #feature-simple {
+            background-position: 90px top;
+        }
+
+        #feature-invite {
+            background-position: -370px top;
+        }
+
+        #feature-secure {
+            background-position: -830px top;
+        }
+
+        #feature-account,
+        #feature-getfx {
+            background-position: -1290px top
+        }
+    }
+
+    // Video
+
+    #video {
+        // temporary placeholder
+        video {
+            width: 300px;
+        }
+    }
+}
