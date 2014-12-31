@@ -177,7 +177,7 @@ html[dir="rtl"] {
     padding-bottom: @baseLine * 2;
 
     .container {
-        padding-top: 156px; // compensate for pushing up under tabzilla
+        padding-top: 116px; // compensate for pushing up under tabzilla
     }
 
     .h1,
@@ -433,7 +433,7 @@ html[dir="rtl"] {
 
     .message {
         opacity: 0;
-        .transform(scale(0) translateY(150px));
+        .transform(scale(0) translateY(180px));
     }
 
     #message-blue1 {
@@ -568,12 +568,12 @@ html[dir="rtl"] {
         }
 
         #laptop {
-            .animation(fade-out 0.4s ease forwards 4.5s);
+            .animation(fade-out 0.4s ease forwards 5.4s);
         }
 
         #browser {
-            @animations: browser-out 0.4s ease forwards 4.5s,
-                         browser-in 0.6s ease forwards 8s;
+            @animations: browser-out 0.4s ease forwards 5.5s,
+                         browser-in 0.6s ease forwards 8.8s;
             .animation(@animations);
         }
 
@@ -584,118 +584,118 @@ html[dir="rtl"] {
         #intro-face {
             @animations: intro-face-shrink 0.5s ease forwards 2s,
                          fade-out 0.4s ease forwards 4.5s,
-                         fade-in 0.6s ease forwards 8s;
+                         fade-in 0.6s ease forwards 8.8s;
             .animation(@animations);
         }
 
         #hello-panel {
             @animations: hello-panel-in 0.3s ease forwards 2.5s,
-                         hello-panel-out 0.3s ease forwards 3.5s;
+                         hello-panel-out 0.3s ease forwards 3.7s;
             .animation(@animations);
         }
 
         #hello-panel-text1 {
-            .animation(hello-panel-text-in 0.2s ease forwards 2.6s);
+            .animation(hello-panel-text-in 0.25s ease forwards 2.6s);
         }
 
         #hello-panel-text2 {
-            .animation(hello-panel-text-in 0.2s ease forwards 2.65s);
+            .animation(hello-panel-text-in 0.25s ease forwards 2.67s);
         }
 
         #hello-panel-text3 {
-            .animation(hello-panel-text-in 0.2s ease forwards 2.7s);
+            .animation(hello-panel-text-in 0.25s ease forwards 2.74s);
         }
 
         #hello-panel-button {
-            .animation(hello-panel-button-in 0.3s ease forwards 2.8s);
+            .animation(hello-panel-button-in 0.3s ease forwards 2.85s);
         }
 
         #chat-window-green {
-            @animations: chat-window-green-in 0.3s ease forwards 3.2s,
-                         fade-out 0.4s ease forwards 4.5s;
+            @animations: chat-window-green-in 0.4s ease forwards 3.5s,
+                         fade-out 0.4s ease forwards 5.5s;
             .animation(@animations);
         }
 
         #chatter-green {
-            .animation(chatter-green-in 0.3s ease forwards 3.5s);
+            .animation(chatter-green-in 0.4s ease forwards 3.9s);
         }
 
         #laptop-camera-on {
-            .animation(laptop-camera-on-in 0.3s ease forwards 3.5s);
+            .animation(laptop-camera-on-in 0.3s ease forwards 3.9s);
         }
 
         #chat-window-blue {
-            @animations: chat-window-blue-in 0.3s ease forwards 3.6s,
-                         fade-out 0.4s ease forwards 4.5s;
+            @animations: chat-window-blue-in 0.4s ease forwards 4.3s,
+                         fade-out 0.4s ease forwards 5.5s;
             .animation(@animations);
         }
 
         #chatter-blue {
-            .animation(chatter-blue-in 0.3s ease forwards 3.9s);
+            .animation(chatter-blue-in 0.4s ease forwards 4.7s);
         }
 
         #message-blue1 {
-            @animations: message-in 0.5s ease forwards 4.5s,
-                         message-out 0.3s ease-in forwards 5s;
+            @animations: message-in 0.5s ease forwards 5.5s,
+                         message-out 0.3s ease-in forwards 6.1s;
             .animation(@animations);
         }
 
         #message-green1 {
-            @animations: message-in 0.5s ease forwards 4.7s,
-                         message-out 0.3s ease-in forwards 5.2s;
+            @animations: message-in 0.5s ease forwards 5.7s,
+                         message-out 0.3s ease-in forwards 6.3s;
             .animation(@animations);
         }
 
         #message-blue2 {
-            @animations: message-in 0.5s ease forwards 5.1s,
-                         message-out 0.3s ease-in forwards 5.6s;
+            @animations: message-in 0.5s ease forwards 6.1s,
+                         message-out 0.3s ease-in forwards 6.7s;
             .animation(@animations);
         }
 
         #message-green2 {
-            @animations: message-in 0.5s ease forwards 5.3s,
-                         message-out 0.3s ease-in forwards 5.8s;
+            @animations: message-in 0.5s ease forwards 6.3s,
+                         message-out 0.3s ease-in forwards 6.9s;
             .animation(@animations);
         }
 
         #message-blue3 {
-            @animations: message-in 0.5s ease forwards 5.7s,
-                         message-out 0.3s ease-in forwards 6.2s;
+            @animations: message-in 0.5s ease forwards 6.7s,
+                         message-out 0.3s ease-in forwards 7.3s;
             .animation(@animations);
         }
 
         #message-green3 {
-            @animations: message-in 0.5s ease forwards 5.9s,
-                         message-out 0.3s ease-in forwards 6.4s;
+            @animations: message-in 0.5s ease forwards 6.9s,
+                         message-out 0.3s ease-in forwards 7.5s;
             .animation(@animations);
         }
 
         #message-blue4 {
-            @animations: message-in 0.5s ease forwards 6.3s,
-                         message-out 0.3s ease-in forwards 6.8s;
+            @animations: message-in 0.5s ease forwards 7.3s,
+                         message-out 0.3s ease-in forwards 7.9s;
             .animation(@animations);
         }
 
         #message-green4 {
-            @animations: message-in 0.5s ease forwards 6.5s,
-                         message-out 0.3s ease-in forwards 7s;
+            @animations: message-in 0.5s ease forwards 7.5s,
+                         message-out 0.3s ease-in forwards 8.1s;
             .animation(@animations);
         }
 
         #message-blue-face {
-            @animations: message-in 0.5s ease forwards 6.9s,
-                         message-blue-face-shrink 0.5s ease forwards 7.8s;
+            @animations: message-in 0.5s ease forwards 7.9s,
+                         message-blue-face-shrink 0.5s ease forwards 8.8s;
             .animation(@animations);
         }
 
         #message-green-face {
-            @animations: message-in 0.5s ease forwards 7.1s,
-                         message-green-face-out 0.3s ease forwards 7.8s;
+            @animations: message-in 0.5s ease forwards 8.1s,
+                         message-green-face-out 0.3s ease forwards 8.8s;
             .animation(@animations);
         }
 
         #wordmark {
-            .animation(wordmark-in 0.7s ease forwards 7.9s);
+            .animation(wordmark-in 0.75s ease forwards 9s);
         }
     }
 }
@@ -879,7 +879,7 @@ html[dir="rtl"] {
 
 @keyframes message-in {
     0% {
-        .transform(scale(0) translateY(150px));
+        .transform(scale(0) translateY(180px));
         opacity: 0;
     }
     /*60% {
@@ -898,7 +898,7 @@ html[dir="rtl"] {
         opacity: 1;
     }
     100% {
-        .transform(scale(0.5) translateY(-70px));
+        .transform(scale(0.5) translateY(-90px));
         opacity: 0;
     }
 }
@@ -917,6 +917,7 @@ html[dir="rtl"] {
 @keyframes message-blue-face-shrink {
     0% {
         .transform(scale(0.75) translateY(0));
+        opacity: 1;
     }
     100% {
         .transform(scale(0.2) translate(-110px, 130px));
@@ -935,7 +936,7 @@ html[dir="rtl"] {
 
 @keyframes wordmark-in {
     0% {
-        .transform(translateY(10px));
+        .transform(translateY(15px));
         opacity: 0;
     }
     100% {
