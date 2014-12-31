@@ -42,6 +42,71 @@
 <main role="main">
   <section id="intro">
     <div class="container">
+      <div id="animation-stage">
+        <!--[if gt IE 9]><!-->
+        <div class="svg-wrapper" id="intro-face-wrapper">
+          <div id="intro-face">
+            <div class="intro-face-eye" id="intro-face-eye-left">
+              <div class="intro-face-eyelid"></div>
+              <div class="intro-face-eyeball"></div>
+            </div>
+
+            <div class="intro-face-eye" id="intro-face-eye-right">
+              <div class="intro-face-eyelid"></div>
+              <div class="intro-face-eyeball"></div>
+            </div>
+
+            <div class="anim-sprite" id="intro-face-mouth"></div>
+
+            <svg version="1.1" class="actor" id="intro-face-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 374 357" style="enable-background:new 0 0 374 357;" xml:space="preserve">
+              <g>
+                <path id="intro-face-bubble" d="M187,2C84.8,2,2,74.8,2,164.5c0,44.7,20.5,85.1,53.7,114.5C50,299.3,38.6,326.9,16,353.8
+                  c3.8,6.8,67.4-17.2,112.2-35.3c18.5,5.4,38.2,8.4,58.8,8.4c102.2,0,185-72.7,185-162.5C372,74.8,289.2,2,187,2z"/>
+              </g>
+            </svg>
+          </div>{#-- /#intro-face --#}
+        </div>{#-- /#intro-face-wrapper --#}
+
+        <div class="anim-sprite" id="laptop">
+          <div class="anim-sprite" id="laptop-camera-on"></div>
+        </div>
+
+        <div class="anim-sprite" id="browser">
+          <div id="hello-panel">
+            <div id="hello-panel-contents">
+              <div class="hello-panel-text" id="hello-panel-text1"></div>
+              <div class="hello-panel-text" id="hello-panel-text2"></div>
+              <div class="hello-panel-text last" id="hello-panel-text3"></div>
+              <div id="hello-panel-button"></div>
+            </div>
+          </div>{#-- /#hello-panel --#}
+
+          <div class="chat-window" id="chat-window-green">
+            <div class="anim-sprite green-face" id="chatter-green"></div>
+          </div>
+
+          <div class="chat-window" id="chat-window-blue">
+            <div class="anim-sprite blue-face" id="chatter-blue"></div>
+          </div>
+        </div>{#-- /#browser --#}
+
+        <div id="conversation">
+          <div class="anim-sprite message" id="message-blue1"></div>
+          <div class="anim-sprite message" id="message-green1"></div>
+          <div class="anim-sprite message" id="message-blue2"></div>
+          <div class="anim-sprite message" id="message-green2"></div>
+          <div class="anim-sprite message" id="message-blue3"></div>
+          <div class="anim-sprite message" id="message-green3"></div>
+          <div class="anim-sprite message" id="message-blue4"></div>
+          <div class="anim-sprite message" id="message-green4"></div>
+          <div class="anim-sprite message blue-face" id="message-blue-face"></div>
+          <div class="anim-sprite message green-face" id="message-green-face"></div>
+        </div>
+
+        <div class="anim-sprite" id="wordmark"></div>
+        <!--<![endif]-->
+      </div>{#-- /#animation-stage --#}
+
       <h1 class="h1">{{ _('As easy as saying hello') }}</h1>
 
       <h2 class="h3">
